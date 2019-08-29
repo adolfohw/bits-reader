@@ -5,3 +5,6 @@ authors = ["Adolfo H. Wernke <adolfohw@gmail.com>"]
 edition = "2018"
 license = "MIT"
 description = "Provides a trait to read bits from a stream of integers."
+repository = "https://github.com/adolfohw/bits-reader"
+keywords = ["bits"]
+categories = ["encoding"]
