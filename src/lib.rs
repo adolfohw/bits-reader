@@ -24,7 +24,7 @@ impl_one!(i8 i16 i32 i64 i128 isize);
 /// This trait takes a generator of integers and transforms it into a stream of
 /// the bits that compose each of them. This crate already implements it for all
 /// integer types, so it only needs to be brought into scope via
-/// `use bits::AsBits`.
+/// `use bitsreader::AsBits`.
 ///
 /// If it were to be implemented by some custom numeric type, the trait
 /// [One](./trait.One.html) must be implemented for it.
@@ -37,7 +37,7 @@ pub trait AsBits {
 	/// # Examples
 	///
 	/// ```rust
-	/// use bits::AsBits;
+	/// use bitsreader::AsBits;
 	///
 	/// let mut bits = [0b1011_0101u8, 0b0100_1110].iter().as_bits();
 	/// assert_eq!(bits.next(), Some(1));
@@ -102,7 +102,7 @@ where
 	/// # Examples
 	///
 	/// ```rust
-	/// use bits::AsBits;
+	/// use bitsreader::AsBits;
 	///
 	/// let mut bit_stream = [0b1100u8].iter().as_bits();
 	/// assert_eq!(bit_stream.get_bits(4), Some(0));
